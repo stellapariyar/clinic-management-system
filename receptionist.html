@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Receptionist Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    .dashboard {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+    button {
+      padding: 12px 25px;
+      border: none;
+      background: #007bff;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 250px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Receptionist Dashboard</h1>
+
+  <div class="dashboard">
+    <button onclick="location.href='add-patient.html'">➕ Add New Patient</button>
+    <button onclick="location.href='token-queue.html'">📋 View Token Queue</button>
+    <button onclick="location.href='patient-history.html'">📜 Patient History</button>
+    <button onclick="location.href='billing.html'">🧾 Generate Bill</button>
+    <button onclick="logout()">🚪 Logout</button>
+  </div>
+
+  <script>
+    function logout() {
+      alert("Logging out...");
+      window.location.href = "login.html"; // back to login
+    }
+  </script>
+</body>
+</html>

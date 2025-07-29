@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,3 +90,96 @@
   </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Token Queue</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 40px;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    table {
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 15px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+    button {
+      padding: 6px 12px;
+      background: #28a745;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Patient Token Queue</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Token No</th>
+        <th>Patient Name</th>
+        <th>Phone</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="tokenList">
+      <!-- Placeholder data, will be replaced by Firebase later -->
+      <tr>
+        <td>TKN1032</td>
+        <td>Jane Doe</td>
+        <td>9876543210</td>
+        <td>Waiting</td>
+        <td><button onclick="sendToDoctor(this)">Send to Doctor</button></td>
+      </tr>
+      <tr>
+        <td>TKN1033</td>
+        <td>John Smith</td>
+        <td>9123456789</td>
+        <td>Waiting</td>
+        <td><button onclick="sendToDoctor(this)">Send to Doctor</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    function sendToDoctor(button) {
+      const row = button.parentNode.parentNode;
+      row.cells[3].textContent = "Sent";
+      button.disabled = true;
+      button.textContent = "Sent";
+      // Firebase logic to update status will go here later
+      alert("Patient sent to doctor.");
+    }
+  </script>
+</body>
+</html>
+>>>>>>> fd9ae07cdb8e9e88b319e0f0f43d3ada9f997e74

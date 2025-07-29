@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,3 +84,90 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Patient Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 40px;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    .patient-box {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .patient-box p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #28a745;
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Patient Details & Prescription</h2>
+
+  <div class="patient-box">
+    <!-- These values will later be dynamically fetched from Firebase -->
+    <p><strong>Token:</strong> TKN1032</p>
+    <p><strong>Name:</strong> Jane Doe</p>
+    <p><strong>Age:</strong> 28</p>
+    <p><strong>Reason for Visit:</strong> Fever and headache</p>
+
+    <textarea id="diagnosis" rows="2" placeholder="Diagnosis (e.g., Viral Fever)" required></textarea>
+    <textarea id="prescription" rows="4" placeholder="Prescription (e.g., Paracetamol 500mg, ORS)" required></textarea>
+
+    <button onclick="submitPrescription()">Submit Prescription</button>
+  </div>
+
+  <script>
+    function submitPrescription() {
+      const diagnosis = document.getElementById("diagnosis").value;
+      const prescription = document.getElementById("prescription").value;
+
+      if (!diagnosis || !prescription) {
+        alert("Please fill in both fields.");
+        return;
+      }
+
+      // Later this will be saved to Firebase
+      alert(`Prescription submitted!\nDiagnosis: ${diagnosis}\nPrescription: ${prescription}`);
+
+      // Clear inputs
+      document.getElementById("diagnosis").value = '';
+      document.getElementById("prescription").value = '';
+    }
+  </script>
+
+</body>
+</html>
+>>>>>>> fd9ae07cdb8e9e88b319e0f0f43d3ada9f997e74

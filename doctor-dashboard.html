@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,110 +7,36 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #eef2f3;
-      padding: 40px;
+      background: #f3f3f3;
       text-align: center;
+      padding: 50px;
     }
-    h1 {
+    h2 {
       color: #333;
     }
-    .dashboard {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-    }
-    button {
-      width: 250px;
-      padding: 12px;
-      font-size: 16px;
-      border: none;
-      border-radius: 6px;
-      background: #007bff;
+    .button {
+      display: block;
+      margin: 15px auto;
+      padding: 12px 20px;
+      background-color: #007bff;
       color: white;
+      border: none;
+      border-radius: 5px;
+      width: 200px;
+      font-size: 16px;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
-    button:hover {
-      background: #0056b3;
+    .button:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
+  <h2>Doctor Dashboard</h2>
 
-  <h1>Doctor Dashboard</h1>
-
-  <div class="dashboard">
-    <button onclick="location.href='view-patient.html'">🔍 View Assigned Patients</button>
-    <button onclick="location.href='doctor-history.html'">📜 Patient History</button>
-    <button onclick="logout()">🚪 Logout</button>
-  </div>
-
-  <script>
-    function logout() {
-      alert("Logging out...");
-      window.location.href = "login.html";
-    }
-  </script>
-
+  <button class="button" onclick="location.href='assigned-patients.html'">🔍 View Assigned Patients</button>
+  <button class="button" onclick="location.href='doctor-history.html'">📋 Patient History</button>
+  <button class="button" onclick="location.href='index.html'">📄 Logout</button>
 </body>
 </html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Doctor Dashboard</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #eef2f3;
-      padding: 40px;
-      text-align: center;
-    }
-    h1 {
-      color: #333;
-    }
-    .dashboard {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-    }
-    button {
-      width: 250px;
-      padding: 12px;
-      font-size: 16px;
-      border: none;
-      border-radius: 6px;
-      background: #007bff;
-      color: white;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #0056b3;
-    }
-  </style>
-</head>
-<body>
-
-  <h1>Doctor Dashboard</h1>
-
-  <div class="dashboard">
-    <button onclick="location.href='view-patient.html'">🔍 View Assigned Patients</button>
-    <button onclick="location.href='doctor-history.html'">📜 Patient History</button>
-    <button onclick="logout()">🚪 Logout</button>
-  </div>
-
-  <script>
-    function logout() {
-      alert("Logging out...");
-      window.location.href = "login.html";
-    }
-  </script>
-
-</body>
-</html>
->>>>>>> fd9ae07cdb8e9e88b319e0f0f43d3ada9f997e74
